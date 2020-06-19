@@ -1,11 +1,11 @@
 import React from 'react';
 
 import './App.scss';
-import { ProductsContainer } from './containers/Products';
+import Products from './pages/products/containers/Products';
 
 function App() {
   return (
-    <ProductsContainer />
+    <Products />
   );
 }
 
