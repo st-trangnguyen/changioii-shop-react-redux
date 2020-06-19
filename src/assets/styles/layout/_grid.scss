@@ -1,0 +1,85 @@
+$grid__cols: 12;
+
+.row {
+  @include pxRem(margin, 0 -15);
+  display: flex;
+  flex-wrap: wrap;
+  > [class*="col-"] {
+    @include pxRem(padding, 12 15);
+    flex-grow: 0;
+    flex-shrink: 0;
+    -webkit-box-flex: 0
+  }
+}
+.row {
+  @for $i from 1 through $grid__cols {
+    .col-#{$i} {
+      @include basis-width($i);
+    }
+    @for $i from 1 through $grid__cols {
+      @include respond-below(largest) {
+        .col-xl-#{$i} {
+          @include basis-width($i);
+        }
+      }
+      @include respond-below(large) {
+        .col-lg-#{$i} {
+          @include basis-width($i);
+        }
+      }
+      @include respond-below(wide) {
+        .col-wd-#{$i} {
+          @include basis-width($i);
+        }
+      }
+      @include respond-below(medium) {
+        .col-md-#{$i} {
+          @include basis-width($i);
+        }
+      }
+      @include respond-below(small) {
+        .col-sm-#{$i} {
+          @include basis-width($i);
+        }
+      }
+    }
+  }
+}
+
+$value : 5;
+
+$sizeList : 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+/*Margin*/
+@each $size in $sizeList {
+  .mg-#{$size} {
+    margin: $value * $size !important;
+  }
+  .mt-#{$size} {
+    margin-top: $value * $size !important;
+  }
+  .ml-#{$size} {
+    margin-left: $value * $size !important;
+  }
+  .mb-#{$size} {
+    margin-bottom: $value * $size !important;
+  }
+  .mr-#{$size} {
+    margin-right: $value * $size !important;
+  }
+  .pd-#{$size} {
+    padding: $value * $size !important;
+  }
+  .pl-#{$size} {
+    padding-left: $value * $size !important;
+  }
+  .pr-#{$size} {
+    padding-right: $value * $size !important;
+  }
+  .pt-#{$size} {
+    padding-top: $value * $size !important;
+  }
+  .pb-#{$size} {
+    padding-bottom: $value * $size !important;
+  }
+}

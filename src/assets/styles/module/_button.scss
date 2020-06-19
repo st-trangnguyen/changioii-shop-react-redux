@@ -1,0 +1,18 @@
+.btn {
+  border-radius: 0;
+  padding: 12px;
+  width: 200px;
+
+  &.btn-primary {
+    background-color: map-get($color, text-primary);
+    border-color: map-get($color, text-primary);
+    &:hover {
+      background-color: rgba($color: map-get($color, text-primary), $alpha: 0.8);;
+      border-color: rgba($color: map-get($color, text-primary), $alpha: 0.8);;
+    }
+  }
+
+  &.btn-has-icon {
+    width: auto;
+  }
+}

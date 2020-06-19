@@ -1,0 +1,26 @@
+.footer {
+  .form {
+    &-control {
+      height: 54px;
+    }
+  }
+
+  &-block-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .info {
+    &-item {
+      margin-bottom: 15px;
+      color: map-get($color, text-secondary);
+    }
+  }
+
+  .instagram-image {
+    padding: 8px;
+    height: 95px;
+    width: 95px;
+  }
+}

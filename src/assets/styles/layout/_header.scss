@@ -1,0 +1,33 @@
+.logo {
+  font-family: $font-dancing;
+  font-weight: 700;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 10;
+  transition:1s all ease;
+
+  &.header-fixed {
+    background: rgba($color: map-get($color, white), $alpha: 0.8);
+
+    a,
+    button {
+      color: map-get($color, text-primary);
+    }
+  }
+
+  .logo {
+    font-size: 38px;
+  }
+
+  a,
+  button {
+    color: map-get($color, white);
+  }
+}

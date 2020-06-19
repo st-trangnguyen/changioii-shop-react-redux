@@ -1,0 +1,15 @@
+$sizes: xs, sm, md, lg, xl, xxl, xxxl;
+
+@each $size in $sizes {
+  .txt-#{$size} {
+    font-size: map-get($font-size, $size);
+  }
+}
+
+.txt-line-through {
+  text-decoration: line-through;
+}
+
+.txt-secondary {
+  color: map-get($color, text-secondary);
+}

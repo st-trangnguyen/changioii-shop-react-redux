@@ -1,0 +1,18 @@
+.bg-zoom-wrapper {
+  overflow: hidden;
+
+  &:hover {
+    .bg-zoom-inner {
+      transform: scale(1.09);
+    }
+  }
+
+  .bg-zoom-inner {
+    padding-top: 350px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform .5s cubic-bezier(0, 0, .44, 1.18);
+    position: relative;
+  }
+}
