@@ -1,0 +1,4 @@
+@mixin basis-width($size) {
+  flex-basis: (100 / (12 / $size) ) * 1%;
+  max-width: (100 / (12 / $size) ) * 1%;
+}

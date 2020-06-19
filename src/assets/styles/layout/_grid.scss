@@ -1,11 +1,11 @@
 $grid__cols: 12;
 
 .row {
-  @include pxRem(margin, 0 -15);
+  margin: 0 -15px;
   display: flex;
   flex-wrap: wrap;
   > [class*="col-"] {
-    @include pxRem(padding, 12 15);
+    padding: 12px 15px;
     flex-grow: 0;
     flex-shrink: 0;
     -webkit-box-flex: 0
@@ -15,33 +15,6 @@ $grid__cols: 12;
   @for $i from 1 through $grid__cols {
     .col-#{$i} {
       @include basis-width($i);
-    }
-    @for $i from 1 through $grid__cols {
-      @include respond-below(largest) {
-        .col-xl-#{$i} {
-          @include basis-width($i);
-        }
-      }
-      @include respond-below(large) {
-        .col-lg-#{$i} {
-          @include basis-width($i);
-        }
-      }
-      @include respond-below(wide) {
-        .col-wd-#{$i} {
-          @include basis-width($i);
-        }
-      }
-      @include respond-below(medium) {
-        .col-md-#{$i} {
-          @include basis-width($i);
-        }
-      }
-      @include respond-below(small) {
-        .col-sm-#{$i} {
-          @include basis-width($i);
-        }
-      }
     }
   }
 }
