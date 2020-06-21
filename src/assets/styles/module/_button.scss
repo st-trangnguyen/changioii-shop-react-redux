@@ -2,7 +2,7 @@
   border-radius: 0;
   padding: 12px;
   width: 200px;
-
+  color: map-get($color, white);
   &.btn-primary {
     background-color: map-get($color, text-primary);
     border-color: map-get($color, text-primary);
@@ -14,5 +14,7 @@
 
   &.btn-has-icon {
     width: auto;
+    border: none;
+    background: transparent;
   }
 }

@@ -4,7 +4,9 @@
   }
 
   &-control {
+    width: 100%;
     border-radius: 0;
-    border-color: map-get($color, text-primary);
+    border: 1px solid map-get($color, text-primary);
+    padding: 12px;
   }
 }
