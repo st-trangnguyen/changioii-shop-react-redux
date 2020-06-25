@@ -29,5 +29,6 @@
   a,
   button {
     color: map-get($color, white);
+    display: block;
   }
 }
