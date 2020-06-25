@@ -38,10 +38,10 @@ export const CountBtn = () => {
 
 ### What is props , example ?
 
-Props stands for properties and is being used for passing data from one component to another.
-Props can only be pass one way from parent component to child component
-Props are read-only. Cannot change props value.
-Props are passed to components via HTML attributes.
+- Props stands for properties and is being used for passing data from one component to another.
+- Props can only be pass one way from parent component to child component
+- Props are read-only. Cannot change props value.
+- Props are passed to components via HTML attributes.
 
 *Parent.tsx*
 ```
