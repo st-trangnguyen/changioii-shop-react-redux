@@ -1,5 +1,7 @@
 .btn {
   border-radius: 0;
+  border-width: 1px;
+  border-style: solid;
   padding: 12px;
   width: 200px;
   color: map-get($color, white);

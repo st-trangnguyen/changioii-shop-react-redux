@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from '../../../shared/components/layouts/Header';
 import Footer from '../../../shared/components/layouts/Footer';
+import Banner from '../../../shared/components/layouts/Banner';
 import ProductItem from './ProductItem';
 import SectionTitle from '../../../shared/components/partial/SectionTitle';
 
@@ -75,6 +76,7 @@ const Products = () => {
   return(
     <div>
       <Header />
+      <Banner />
       <main className="main-content">
         <section className="product bg-gray-light py-5">
           <div className="container-fluid">

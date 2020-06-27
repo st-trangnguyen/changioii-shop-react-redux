@@ -42,7 +42,9 @@
 
 .product {
   &-item {
-    position: relative;
+    &-inner {
+      position: relative;
+    }
 
     &-img.bg-zoom-inner {
       padding-top: 300px;

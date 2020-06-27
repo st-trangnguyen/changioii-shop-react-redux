@@ -20,7 +20,7 @@ const Footer = () => {
       <section className="footer-middle bg-gray-light py-5">
         <div className="container">
           <div className="row">
-            <div className="col-3">
+            <div className="col-4">
               <a className="logo txt-xxxl mb-2">Changioii</a>
               <ul className="info my-4">
                 <li className="info-item mb-3 d-flex align-items-center">
@@ -51,7 +51,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-3">
+            <div className="col-4">
               <h5 className="footer-block-title">Infomation</h5>
               <ul className="info">
                 <li className="info-item">
@@ -74,7 +74,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-3">
+            <div className="col-4">
               <h5 className="footer-block-title">Useful Links</h5>
               <ul className="info">
                 <li className="info-item">
@@ -94,29 +94,6 @@ const Footer = () => {
                 </li>
                 <li className="info-item">
                   <a>FQAs</a>
-                </li>
-              </ul>
-            </div>
-            <div className="col-3">
-              <h5 className="footer-block-title">Instagrams</h5>
-              <ul className="row">
-                <li className="col-4 instagram-image">
-                  <img src="assets/images/item-1.jpg" alt="item-1" />
-                </li>
-                <li className="col-4 instagram-image">
-                  <img src="assets/images/item-1.jpg" alt="item-1" />
-                </li>
-                <li className="col-4 instagram-image">
-                  <img src="assets/images/item-1.jpg" alt="item-1" />
-                </li>
-                <li className="col-4 instagram-image">
-                  <img src="assets/images/item-1.jpg" alt="item-1" />
-                </li>
-                <li className="col-4 instagram-image">
-                  <img src="assets/images/item-1.jpg" alt="item-1" />
-                </li>
-                <li className="col-4 instagram-image">
-                  <img src="assets/images/item-1.jpg" alt="item-1" />
                 </li>
               </ul>
             </div>
