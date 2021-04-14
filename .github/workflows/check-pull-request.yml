@@ -33,12 +33,22 @@ jobs:
         id: lint-code
         run: npm run lint
 
+      - id: set_var
+        run: |
+          content=`cat ./eslint.log.json`
+          # the following lines are only required for multi line json
+          content="${content//'%'/'%25'}"
+          content="${content//$'\n'/'%0A'}"
+          content="${content//$'\r'/'%0D'}"
+          # end of optional handling for multi line json
+          echo "::set-output name=packageJson::$content"
+
       - name: Create comment
         uses: jungwinter/comment@v1
         id: create
         if: always()
         with:
           type: create
-          body: ${{ steps.lint-code.outputs }}
+          body: "${{fromJson(steps.set_var.outputs.packageJson).version}}"
           issue_number: '3'
           token: ${{ secrets.PROD_GITHUB_TOKEN }}
