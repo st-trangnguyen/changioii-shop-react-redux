@@ -36,6 +36,7 @@ jobs:
       - name: Create comment
         uses: jungwinter/comment@v1
         id: create
+        if: always()
         with:
           type: create
           body: ${{ steps.lint-code.outputs }}
