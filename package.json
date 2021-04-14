@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint */*.tsx"
+    "lint": "eslint -f ./my-awesome-formatter.js --output-file ./eslint.log */*.tsx"
   },
   "eslintConfig": {
     "extends": "react-app"

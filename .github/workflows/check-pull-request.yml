@@ -30,4 +30,14 @@ jobs:
         run: CI=false npm run build
 
       - name: Lint code
+        id: lint-code
         run: npm run lint
+
+      - name: Create comment
+        uses: jungwinter/comment@v1
+        id: create
+        with:
+          type: create
+          body: ${{ steps.lint-code.outputs }}
+          issue_number: '3'
+          token: ${{ secrets.GITHUB_TOKEN }}
