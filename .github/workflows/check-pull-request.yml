@@ -33,15 +33,12 @@ jobs:
         id: lint-code
         run: npm run lint
 
-      - id: set_var
-        run: |
-          content=`cat ./eslint.log.json`
-          # the following lines are only required for multi line json
-          content="${content//'%'/'%25'}"
-          content="${content//$'\n'/'%0A'}"
-          content="${content//$'\r'/'%0D'}"
-          # end of optional handling for multi line json
-          echo "::set-output name=packageJson::$content"
+      - name: Read eslint.log.json
+        id: read-eslint-log
+        if: always()
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./eslint.log.json
 
       - name: Create comment
         uses: jungwinter/comment@v1
@@ -49,6 +46,7 @@ jobs:
         if: always()
         with:
           type: create
-          body: "${{fromJson(steps.set_var.outputs.packageJson).version}}"
-          issue_number: '3'
-          token: ${{ secrets.PROD_GITHUB_TOKEN }}
+          # body: "${{fromJson(steps.set_var.outputs.packageJson).version}}"
+          body: "```\n${{ steps.read-eslint-log.outputs.content }}\n```"
+          issue_number: "3"
+          token: ${{ secrets.PROD_GITHUB_TOKEN_1 }}
