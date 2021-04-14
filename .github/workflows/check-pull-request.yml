@@ -1,0 +1,13 @@
+name: Check convention
+
+on:
+  'pull_request'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build source code
+        run: npm run build
+      - name: Lint code
+        run: npm run lint
