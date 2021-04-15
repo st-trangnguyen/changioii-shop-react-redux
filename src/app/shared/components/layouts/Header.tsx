@@ -24,7 +24,7 @@ export const Header = () => {
     <header className="header py-3 header-fixed">
       <div className="container-fluid d-flex justify-content-between align-items-center">
         <div></div>
-        <Link to="/" className="logo">Changioii</Link>
+        <Link to="/" className="logo">Hello world</Link>
         <ul className="user-action d-flex justify-content-between">
           <li className="user-action-item">
             <button className="btn btn-has-icon btn-user-action">
