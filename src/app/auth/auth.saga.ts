@@ -1,6 +1,5 @@
-import {call, put, takeEvery, takeLatest} from 'redux-saga/effects';
+import {put, takeLatest} from 'redux-saga/effects';
 import * as types from '@app/shared/constant/types';
-import * as actions from './auth.actions';
 import { AnyAction } from 'redux';
 import { APIService, ENDPOINT } from '@app/shared/helpers/api/api.helper';
 
@@ -14,5 +13,5 @@ export function* loginUserSaga({ payload }: AnyAction) {
 }
 
 export function* watchAuth() {
-  yield takeLatest(types.LOGIN_USER, loginUserSaga)
+  yield takeLatest(types.LOGIN_USER, loginUserSaga);
 }

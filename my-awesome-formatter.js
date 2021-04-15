@@ -7,7 +7,7 @@ module.exports = function (results) {
       parser.push({
         filePath: result.filePath,
         messages: result.messages.map((message) => {
-          return `[${message.ruleId}] ${message.line}-${message.endLine}: ${message.message}`
+          return `[${message.ruleId}] ${message.line}-${message.endLine}: ${message.message}`;
         })
       });
     }

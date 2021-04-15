@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { Banner, Loading } from '@app/shared/components/layouts';
 import ProductItem from './ProductItem';
@@ -98,7 +98,7 @@ const Products = () => {
                 !isProcessing && products.length > 0 && products.map((item) => {
                   return(
                     <ProductItem key={ item.id } product={ item } />
-                  )
+                  );
                 })
               }
               {
@@ -114,7 +114,7 @@ const Products = () => {
         </section>
       </main>
     </div>
-  )
-}
+  );
+};
 
 export default Products;
