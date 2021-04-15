@@ -114,7 +114,7 @@ const Products = () => {
         </section>
       </main>
     </div>
-  )
-}
+  );
+};
 
 export default Products;

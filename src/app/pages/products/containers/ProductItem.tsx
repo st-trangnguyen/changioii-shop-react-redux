@@ -55,7 +55,7 @@ const ProductItem = ({ product } : any) => {
         </div>
       </div>
     </li>
-  )
+  );
 };
 
 export default ProductItem;

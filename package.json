@@ -9,7 +9,7 @@
     "start": "webpack-dev-server --env.NODE_ENV=development --debug --devtool cheap-module-source-map --output-pathinfo --history-api-fallback --hot --inline --progress --colors --port 3001",
     "build.prod": "npx webpack --env.NODE_ENV=production",
     "build": "npx webpack",
-    "lint": "eslint -f ./my-awesome-formatter.js --output-file ./eslint.log.json ./src/**/**.tsx"
+    "lint": "eslint -f ./my-awesome-formatter.js --output-file ./eslint.log.json --ext .tsx ./src/**/**/**/**/*.tsx"
   },
   "license": "MIT",
   "devDependencies": {
