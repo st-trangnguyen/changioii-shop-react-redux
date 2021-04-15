@@ -1,0 +1,12 @@
+.form {
+  &-group {
+    min-width: 290px;
+  }
+
+  &-control {
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid map-get($color, text-primary);
+    padding: 12px;
+  }
+}

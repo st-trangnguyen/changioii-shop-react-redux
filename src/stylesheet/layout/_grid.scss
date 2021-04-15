@@ -1,0 +1,108 @@
+$grid__cols: 12;
+
+.row {
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+  > [class*="col-"] {
+    padding: 12px 15px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    -webkit-box-flex: 0
+  }
+}
+.row {
+  @for $i from 1 through $grid__cols {
+    .col-#{$i} {
+      @include basis-width($i);
+    }
+  }
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+$value : 5px;
+
+$sizeList : 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
+
+/*Margin*/
+@each $size in $sizeList {
+  .mg-#{$size} {
+    margin: $value * $size !important;
+  }
+  .mt-#{$size} {
+    margin-top: $value * $size !important;
+  }
+  .ml-#{$size} {
+    margin-left: $value * $size !important;
+  }
+  .mb-#{$size} {
+    margin-bottom: $value * $size !important;
+  }
+  .mr-#{$size} {
+    margin-right: $value * $size !important;
+  }
+  .mx-#{$size} {
+    margin-left: $value * $size !important;
+    margin-right: $value * $size !important;
+  }
+  .my-#{$size} {
+    margin-top: $value * $size !important;
+    margin-bottom: $value * $size !important;
+  }
+  .pd-#{$size} {
+    padding: $value * $size !important;
+  }
+  .pl-#{$size} {
+    padding-left: $value * $size !important;
+  }
+  .pr-#{$size} {
+    padding-right: $value * $size !important;
+  }
+  .pt-#{$size} {
+    padding-top: $value * $size !important;
+  }
+  .pb-#{$size} {
+    padding-bottom: $value * $size !important;
+  }
+  .py-#{$size} {
+    padding-top: $value * $size !important;
+    padding-bottom: $value * $size !important;
+  }
+  .px-#{$size} {
+    padding-left: $value * $size !important;
+    padding-right: $value * $size !important;
+  }
+}
+
+.d-flex {
+  display: flex;
+
+  &.flex-column {
+    flex-direction: column;
+  }
+  &.flex-row {
+    flex-direction: row;
+  }
+
+  &.justify-content-between {
+    justify-content: space-between;
+  }
+  &.justify-content-center {
+    justify-content: center;
+  }
+
+  &.align-items-center {
+    align-items: center;
+  }
+}

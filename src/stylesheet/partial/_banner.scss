@@ -1,0 +1,19 @@
+.banner {
+  min-height: 800px;
+  color: map-get($color, white);
+  .section-title {
+    .title {
+      font-size: 50px;
+      margin-bottom: 30px;
+  
+      &::after {
+        background: #FFFFFF;
+      }
+    }
+  
+    .sub-title {
+      font-size: 28px;
+      font-family: $font-dancing;
+    }
+  }
+}

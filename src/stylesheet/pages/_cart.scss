@@ -1,0 +1,69 @@
+.cart-page {
+  padding: 70px 0;
+  .banner {
+    min-height: 130px;
+    background-image: url('https://cdn.shopify.com/s/files/1/0332/6420/5963/files/pendant_1512x.jpg?v=1585709654');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+      font-size: 28px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+
+  .cart-table {
+    padding: 30px 150px;
+  }
+
+  .cart-header {
+    border-bottom: 1px solid map-get($color, text-primary);
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  .quantity-btn {
+    width: 50%;
+    margin: auto;
+    border: 1px solid;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .btn-minus,
+  .btn-plus {
+    padding: 15px;
+    background: transparent;
+    border: none;
+  }
+  .btn-minus {
+    border-right: 1px solid map-get($color, text-primary);
+  }
+  .btn-plus {
+    border-left: 1px solid map-get($color, text-primary);
+  }
+
+  .cart-item {
+    padding: 15px 0;
+    border-bottom: 1px solid map-get($color, text-primary);
+
+    .product-image {
+      display: block;
+      width: 150px;
+      height: 150px;
+      margin-right: 20px;
+    }
+  }
+
+  .icon-trash {
+    color: map-get($color, black);
+  }
+}
