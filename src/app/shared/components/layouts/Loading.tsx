@@ -5,5 +5,5 @@ export const Loading = ({isShow}) => {
     <div className={isShow ? 'loader-wrapper d-flex justify-content-center align-items-center' : 'hidden'}>
       <div className="loader"></div>
     </div>
-  )
-}
+  );
+};

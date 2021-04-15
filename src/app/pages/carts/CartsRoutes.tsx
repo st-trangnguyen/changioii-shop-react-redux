@@ -8,5 +8,5 @@ export default function CartsRoutes() {
     <Switch>
       <Route exact path='/carts' component={Carts} />
     </Switch>
-  )
+  );
 }

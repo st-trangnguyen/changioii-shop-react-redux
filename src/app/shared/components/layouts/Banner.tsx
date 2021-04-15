@@ -8,5 +8,5 @@ export const Banner = () => {
         <h4 className="sub-title">Make your home more beautiful</h4>
       </div>
     </div>
-  )
+  );
 };
