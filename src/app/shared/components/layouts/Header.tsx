@@ -17,7 +17,7 @@ export const Header = () => {
   }
 
   useEffect(() => {
-    getCartLength()
+    getCartLength();
   }, [cart]);
 
   return(
@@ -45,5 +45,5 @@ export const Header = () => {
         </ul>
       </div>
     </header>
-  )
-}
+  );
+};
