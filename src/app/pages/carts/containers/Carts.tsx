@@ -82,7 +82,7 @@ const Carts = () => {
         </section>
       </div>
     </div>
-  )
+  );
 };
 
 export default Carts;

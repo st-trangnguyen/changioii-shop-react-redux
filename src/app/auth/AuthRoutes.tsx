@@ -11,5 +11,5 @@ export default function AuthRoutes() {
       <Route path='/auth/register' component={RegisterPage} />
       <Route path='/auth/login' component={LoginPage} />
     </Switch>
-  )
+  );
 }

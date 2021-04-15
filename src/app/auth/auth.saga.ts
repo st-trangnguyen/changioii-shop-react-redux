@@ -14,5 +14,5 @@ export function* loginUserSaga({ payload }: AnyAction) {
 }
 
 export function* watchAuth() {
-  yield takeLatest(types.LOGIN_USER, loginUserSaga)
+  yield takeLatest(types.LOGIN_USER, loginUserSaga);
 }

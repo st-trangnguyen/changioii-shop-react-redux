@@ -98,7 +98,7 @@ const Products = () => {
                 !isProcessing && products.length > 0 && products.map((item) => {
                   return(
                     <ProductItem key={ item.id } product={ item } />
-                  )
+                  );
                 })
               }
               {
