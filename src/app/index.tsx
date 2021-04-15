@@ -10,9 +10,9 @@ import reducer from '@app/stores/reducer';
 import saga from '@app/stores/saga';
 import '@app/shared/helpers/i18n/i18n.helper';
 
-import { Header, Footer, Loading } from '@app/shared/components/layouts';
+import { Header, Footer, Loading } from '@app/shared/components/layouts'
 
-const middleware = createSagaMiddleware();
+const middleware = createSagaMiddleware()
 
 const store = createStore(
   reducer,
