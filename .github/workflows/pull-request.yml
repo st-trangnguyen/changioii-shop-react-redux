@@ -47,5 +47,5 @@ jobs:
           type: create
           # body: "${{fromJson(steps.set_var.outputs.packageJson).version}}"
           body: "```\n${{ steps.read-eslint-log.outputs.content }}\n```"
-          issue_number: "3"
+          issue_number: ${{ github.event.pull_request.number }}
           token: ${{ secrets.PROD_GITHUB_TOKEN_1 }}
