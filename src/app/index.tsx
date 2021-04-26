@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import createSagaMiddleware from 'redux-saga';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import { logger } from 'redux-logger';
 import { createStore, applyMiddleware } from 'redux';
 import AppRoutes from '@app/AppRoutes';

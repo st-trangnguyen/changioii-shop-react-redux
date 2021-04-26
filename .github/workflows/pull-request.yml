@@ -1,51 +1,51 @@
-name: Check convention
+# name: Check convention
 
-on: ['pull_request']
+# on: ['pull_request']
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2
 
-      - name: Prepare nodejs
-        uses: actions/setup-node@v1
-        with:
-          node-version: '13.x'
+#       - name: Prepare nodejs
+#         uses: actions/setup-node@v1
+#         with:
+#           node-version: '13.x'
 
-      - name: Cache modules
-        id: yarn-cache
-        uses: actions/cache@v2
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - name: Install dependencies
-        run: npm install
+#       - name: Cache modules
+#         id: yarn-cache
+#         uses: actions/cache@v2
+#         with:
+#           path: '**/node_modules'
+#           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+#           restore-keys: |
+#             ${{ runner.os }}-node-
+#       - name: Install dependencies
+#         run: npm install
 
-      - name: Build source code
-        run: CI=false npm run build
+#       - name: Build source code
+#         run: CI=false npm run build
 
-      - name: Lint code
-        id: lint-code
-        run: npm run lint
+#       - name: Lint code
+#         id: lint-code
+#         run: npm run lint
 
-      - name: Read eslint.log.json
-        id: read-eslint-log
-        if: always()
-        uses: juliangruber/read-file-action@v1
-        with:
-          path: ./eslint.log.json
+#       - name: Read eslint.log.json
+#         id: read-eslint-log
+#         if: always()
+#         uses: juliangruber/read-file-action@v1
+#         with:
+#           path: ./eslint.log.json
 
-      - name: Create comment
-        uses: jungwinter/comment@v1
-        id: create
-        if: always()
-        with:
-          type: create
-          # body: "${{fromJson(steps.set_var.outputs.packageJson).version}}"
-          body: "```\n${{ steps.read-eslint-log.outputs.content }}\n```"
-          issue_number: ${{ github.event.pull_request.number }}
-          token: ${{ secrets.PROD_GITHUB_TOKEN_1 }}
+#       - name: Create comment
+#         uses: jungwinter/comment@v1
+#         id: create
+#         if: always()
+#         with:
+#           type: create
+#           # body: "${{fromJson(steps.set_var.outputs.packageJson).version}}"
+#           body: "```\n${{ steps.read-eslint-log.outputs.content }}\n```"
+#           issue_number: ${{ github.event.pull_request.number }}
+#           token: ${{ secrets.PROD_GITHUB_TOKEN_1 }}

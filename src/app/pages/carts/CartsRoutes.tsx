@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-const Carts = React.lazy(() => import('./containers/Carts'));
+// const Carts = React.lazy(() => import('./containers/Carts'));
+import Carts from './containers/Carts';
 
 export default function CartsRoutes() {
   return (

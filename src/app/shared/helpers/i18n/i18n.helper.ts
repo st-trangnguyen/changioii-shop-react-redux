@@ -10,7 +10,7 @@ i18n
     lng: 'ja',
     fallbackLng: 'ja',
     backend: {
-      loadPath: '/assets/locales/{{lng}}/{{ns}}.json'
+      loadPath: './assets/locales/{{lng}}/{{ns}}.json'
     },
     keySeparator: false, // we do not use keys in form messages.welcome
     interpolation: {

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const Webpack = require('webpack');
 const Path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -17,12 +18,12 @@ module.exports = (env) => {
 
   return {
     mode: environment,
-    target: 'web',
+    target: 'electron-renderer',
     devtool: "source-map",
     context: sourcePath,
     output: {
       path: outPath,
-      publicPath: '/',
+      publicPath: '.',
       filename: '[name].js',
     },
     performance: {
